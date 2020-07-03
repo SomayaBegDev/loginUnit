@@ -1,17 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import 'consList.dart';
-import 'BitConverter.dart';
+import '../consList.dart';
 
 class MyPicker extends StatelessWidget {
   Function onSelectItem;
   MyPicker(this.onSelectItem);
+
   @override
   Widget build(BuildContext context) {
     return CupertinoPicker(
       itemExtent: 30,
-      // magnification: 4,
-      // offAxisFraction: 0.3,
       onSelectedItemChanged: (index) {
         onSelectItem(index);
       },

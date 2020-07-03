@@ -6,6 +6,14 @@ List<String> unitsName = const [
   'Currency Convertor',
   'Temperature Convertor'
 ];
+/*List<Map> unitsNav = [
+  unitConvMemoreyVal,
+  unitConvLengthVal,
+  unitConvWeighthVal,
+  unitConvTimeVal,
+  unitConvCurrencyVal
+];*/
+
 List<String> unitConvMemorey = const [
   'bit',
   'Byte',

@@ -1,16 +1,17 @@
 import 'package:flutter/material.dart';
-import 'consList.dart';
+import 'package:flutter/cupertino.dart';
+import '../consList.dart';
 import 'UpperRow.dart';
-import 'BottomHalf.dart';
+import '../BottomHalf.dart';
+import '../MyScreen.dart';
 
-class BitConverter extends StatefulWidget {
+class BitConvertor extends StatefulWidget {
   @override
-  _BitConverterState createState() => _BitConverterState();
+  _BitConvertorState createState() => _BitConvertorState();
 }
 
-class _BitConverterState extends State<BitConverter> {
-  String fromUnit = 'bit';
-  String toUnit = 'bit';
+class _BitConvertorState extends State<BitConvertor> {
+  String fromUnit = 'bit', toUnit = 'bit';
   double textFieldValue = 1.0;
   String result = "0";
 
@@ -45,20 +46,22 @@ class _BitConverterState extends State<BitConverter> {
 
   @override
   Widget build(BuildContext context) {
-    return Container(
-      child: Column(
-        children: <Widget>[
-          Expanded(
-            child: UpperRow(
-              firstPickerFunction: setFromUnit,
-              textFieldFunction: setTextFieldV,
-              secPickerFunction: setToUnit,
+    return Scaffold(
+      body: Container(
+        child: Column(
+          children: <Widget>[
+            Expanded(
+              child: UpperRow(
+                firstPickerFunction: setFromUnit,
+                textFieldFunction: setTextFieldV,
+                secPickerFunction: setToUnit,
+              ),
             ),
-          ),
-          Expanded(
-            child: BottomHalf(result: result),
-          )
-        ],
+            Expanded(
+              child: BottomHalf(result: result),
+            )
+          ],
+        ),
       ),
     );
   }

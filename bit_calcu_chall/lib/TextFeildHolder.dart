@@ -6,14 +6,12 @@ class TextFeildHolder extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return TextField(
-        keyboardType: TextInputType.number,
-        onChanged: (val) {
-          onChangeTextField(val);
-        },
-        style: TextStyle(
-          fontSize: 25,
-          fontWeight: FontWeight.bold,
-        ),
-        textAlign: TextAlign.center);
+      keyboardType: TextInputType.number,
+      onChanged: (val) {
+        onChangeTextField(val);
+      },
+      textAlign: TextAlign.center,
+      style: TextStyle(fontSize: 20),
+    );
   }
 }
