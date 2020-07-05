@@ -1,27 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:flutter/cupertino.dart';
-import '../consList.dart';
-import '../BitConvertor/UpperRow.dart';
-import '../BottomHalf.dart';
-import '../MyScreen.dart';
+import 'consList.dart';
+import 'UpperRow.dart';
+import 'BottomHalf.dart';
+import 'MyScreen.dart';
 
-class LengthConvertor extends StatefulWidget {
+class Convertor extends StatefulWidget {
   @override
-  _LengthConvertorState createState() => _LengthConvertorState();
+  _ConvertorState createState() => _ConvertorState();
 }
 
-class _LengthConvertorState extends State<LengthConvertor> {
-  String fromUnit = 'nanometer', toUnit = 'nanometer';
+class _ConvertorState extends State<Convertor> {
+  static int getSeelected = MyScreen.selectedItem;
+
+  static List giveSelectedList =
+      unitsNav[getSeelected].keys.map((x) => x).toList();
+
+  static Map<String, dynamic> giveSelectedMap = unitsNav[getSeelected];
+
+  String fromUnit = giveSelectedList[0], toUnit = giveSelectedList[0];
   double textFieldValue = 1.0;
   String result = "0";
 
   setFromUnit(int value) {
-    this.fromUnit = unitConvLength[value];
+    this.fromUnit = giveSelectedList[value];
     operation();
   }
 
   setToUnit(int value) {
-    this.toUnit = unitConvLength[value];
+    this.toUnit = giveSelectedList[value];
     operation();
   }
 
@@ -36,8 +43,8 @@ class _LengthConvertorState extends State<LengthConvertor> {
     if (fromUnit == toUnit) {
       res = textFieldValue;
     } else {
-      res = (textFieldValue * unitConvLengthVal[toUnit]) /
-          unitConvLengthVal[fromUnit];
+      res = (textFieldValue * giveSelectedMap[toUnit]) /
+          giveSelectedMap[fromUnit];
     }
 
     result = res.toString();
@@ -59,7 +66,7 @@ class _LengthConvertorState extends State<LengthConvertor> {
             ),
             Expanded(
               child: BottomHalf(result: result),
-            )
+            ),
           ],
         ),
       ),

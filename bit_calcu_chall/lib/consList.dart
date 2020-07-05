@@ -6,21 +6,15 @@ List<String> unitsName = const [
   'Currency Convertor',
   'Temperature Convertor'
 ];
-/*List<Map> unitsNav = [
+List<Map> unitsNav = [
   unitConvMemoreyVal,
   unitConvLengthVal,
   unitConvWeighthVal,
   unitConvTimeVal,
-  unitConvCurrencyVal
-];*/
-
-List<String> unitConvMemorey = const [
-  'bit',
-  'Byte',
-  'KiloByte',
-  'MegaByte',
-  'GigaByte'
+  unitConvCurrencyVal,
+  unitConvTempVal
 ];
+
 Map<String, dynamic> unitConvMemoreyVal = const {
   'bit': 1,
   'Byte': 0.125,
@@ -29,15 +23,6 @@ Map<String, dynamic> unitConvMemoreyVal = const {
   'GigaByte': 1.16415321826935e-10
 };
 
-List<String> unitConvLength = const [
-  'nanometer',
-  'micrometer',
-  'millimeter',
-  'centimeter',
-  'decimeter',
-  'meter',
-  'kilometer'
-];
 Map<String, dynamic> unitConvLengthVal = const {
   'nanometer': 1,
   'micrometer': 0.001,
@@ -47,16 +32,6 @@ Map<String, dynamic> unitConvLengthVal = const {
   'meter': 0.0000000009999999999,
   'kilometer': 0.000000000001
 };
-
-List<String> unitConvWeight = const [
-  'Ounces',
-  'Pounds',
-  'Stones',
-  'Micrograms',
-  'Milligrams',
-  'Grams',
-  'Kilograms'
-];
 
 Map<String, dynamic> unitConvWeighthVal = const {
   'Ounces': 1,
@@ -84,14 +59,6 @@ Map<String, dynamic> unitConvCurrencyVal = const {
   'EGP': 0.25,
   'JD': 5
 };
-
-List<String> unitConvTemp = const [
-  'Celsius',
-  'Fahrenheit',
-  'Rankine',
-  'Reaumur',
-  'Kelvin'
-];
 
 Map<String, dynamic> unitConvTempVal = const {
   'Celsius': 1,

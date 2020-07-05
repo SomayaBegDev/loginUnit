@@ -14,6 +14,6 @@ class _MyAppState extends State<MyApp> {
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(title: "Unit Convertors", home: MyScreen());
+    return MaterialApp(title: "Units Convertor", home: MyScreen());
   }
 }
